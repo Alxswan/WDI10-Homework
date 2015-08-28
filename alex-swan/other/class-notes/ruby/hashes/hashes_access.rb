@@ -8,14 +8,11 @@ p a[1]
 a.push "Alex"
 p a
 
-
 # B. Given the following data structure:
-
-
 h = {0 => "Zero", 1 => "One", :two => "Two", "two" => 2}
 # How would you return the string "One"?
 
-# p h[1]
+p h[1]
 
 # How would you return the string "Two"?
 
@@ -25,18 +22,13 @@ p h[:two]
 
 p h['two']
 
-
-
 # How would you add {3 => "Three"} to the hash?
 h[3] = "Three" 
 
 # How would you add {:four => 4} to the hash?
 h[:four] = 4
 
-
 # C. Given the following data structure:
-
-
 
 is = {true => "It's true!", false => "It's false"}
 # What is the return value of 
@@ -54,7 +46,6 @@ is = {true => "It's true!", false => "It's false"}
 # What is the return value of 
 # p is["Erik"]
 # "It's true!" X nil ?? ==> looking for key of Erik which does not exist
-
 
 # D. Given the following data structure:
 
@@ -94,5 +85,6 @@ users["Jonathan"][:favorite_numbers]+users["Erik"][:favorite_numbers] | users["A
  # & (and: give me what is in both) | (or: give me what is in either)
 # How would you return an array containing all users' favorite numbers, sorted, and excluding duplicates?
 (users["Jonathan"][:favorite_numbers]+users["Erik"][:favorite_numbers] | users["Anil"][:favorite_numbers]).uniq.sort
+
 require 'pry'
 binding.pry
