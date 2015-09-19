@@ -1,0 +1,8 @@
+<h2>Edit mountain</h2>	
+	<form action='<%=mountain_path(@mountain.id)%>' method="post">
+	<p>Name: <input type="text" name="mountain[name]" value="<%= @mountain.name %>"></p>
+	<p>Image: <input type="url"name="mountain[image]" value="<%= @mountain.image %>"></p>
+	<p>Height: <input type="number"name="mountain[height]" value="<%= @mountain.height %>"></p>
+	<p>Range: <input type="text"name="mountain[range]" value="<%= @mountain.range %>"></p>
+	<input type="submit" value="Move Mountain">
+</form>

@@ -1,0 +1,15 @@
+<% if @list.length == 1
+	title = @list[0]['Title']
+	get "/http://omdbapi.com/?t=#{title}"
+	
+	else %>
+
+  <% @list.each do |movie| %>
+
+	<% movie = movie['Title'] %> 
+	<ul>
+	<li><a href="http://omdbapi.com/?t=<%=movie%>"><%=movie%></a></li>
+	</ul>
+
+<% end %>
+<% end%>

@@ -1,3 +1,19 @@
+class Person
+	attr_accessor :name, :age, :gender # Free getters and setters
+
+	def initialize(name, age, gender) # Set our instance variables when we create each person
+		@name = name
+		@age = age
+		@gender = gender
+	end
+
+	def story
+		"#{ @name.capitalize } identifies as #{ @gender} and is #{ @age} years old."
+	end
+
+end
+
+
 db = File.new( 'database.txt', 'a+') #open in append mode and create if necessary
 
 print "Would you like to add people to the database? (y/n): "
@@ -21,19 +37,12 @@ people = []
 
 db.each do |entry|
 
-	person_info  = entry.chomp.split(',') #takes person line and splits into an array with 3 parts
-	person = {
-		:name => person_info[0],
-		:age => person_info[1],
-		:gender => person_info[2]
-	}
-	def person.story
-		"#{ self[:name].capitalize } identifies as #{ self[:gender]} and is #{ self[:age]} years old."
-
-	end
-
-	people << person
+	person_info  = entry.chomp.split(',')
+	people << Person.new(person_info[0], person_info[1], person_info[2])
 end
+
+require 'pry'
+binding.pry
 
 db.close
 

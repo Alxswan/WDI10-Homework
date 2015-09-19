@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Blog</title>
+	<script src="js/underscore.js"></script>
+	<script src="js/jquery.js"></script>
+	<script src="js/backbone.js"></script>
+	<script src="js/blog.js"></script>
+</head>
+<body>
+	
+	<nav>
+		<a href="#">Home</a>
+	</nav>
+
+	<div id="main"></div>
+
+	<script id="appView" type="text/template">
+		<h2>Recent posts</h2>
+		<ul id="posts"></ul>
+	</script>
+
+	<script id="postView" type ="text/template">
+	<h3><%= title %></h3>
+	<blockquote><%= content %></blockquote>
+	</script>
+
+	<script id="postListView" type ="text/template">
+	<h3><%= title %></h3>
+	</script>
+</body>
+</html>

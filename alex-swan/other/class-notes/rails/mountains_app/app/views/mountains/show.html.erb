@@ -1,0 +1,12 @@
+<h2><%= @mountain.name %></h2>
+
+<p>Range: <%= @mountain.range %></p>
+<p>Altiture: <%= @mountain.height %>m</p>
+<%if @mountain.image %>
+<%= image_tag @mountain.image, :class => 'image' %>
+<% end %>
+
+<div class="controls">
+<%= link_to('Move mountain', mountain_edit_path(@mountain.id)) %>
+<%= button_to('Flatten mountain', mountain_path(@mountain.id), :method => 'delete') %>
+</div>

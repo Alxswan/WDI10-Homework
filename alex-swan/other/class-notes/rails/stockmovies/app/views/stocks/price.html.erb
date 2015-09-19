@@ -1,0 +1,8 @@
+<h1>Get Stock Price</h1>
+
+<% unless @price.nil? %>
+	Current price of <%= @name %> 
+	is: 
+	<p> <%= number_to_currency(@price) %> </p>
+<%	end %>
+<a href="/">Pick another stock</a>

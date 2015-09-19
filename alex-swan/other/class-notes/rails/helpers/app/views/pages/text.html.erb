@@ -1,0 +1,12 @@
+<p><%= pluralize(@error_count1, 'person') %> occured.</p>
+
+<p><%= pluralize(@error_count2, 'person') %> occured.</p>
+
+<p><%= truncate(@story, :length => 14) %></p>
+
+<!-- zebra striping -->
+<ul> 
+	<% @numbers.each do |n| %>
+	<li style="background-color: <%= cycle( 'red', 'green', 'purple', 'orange' ) %>"><%= n %></li>
+	<% end %>
+</ul>

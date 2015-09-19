@@ -1,0 +1,7 @@
+<h2>Tallest Mountains</h2>
+<h3>Index</h3>
+<ul>
+	<% @mountains.each  do |mountain| %>
+	<li><%= link_to(mountain.name, mountain_path(mountain.id)) %>, <%= mountain.range %> Ranges.</li>
+	<% end %>
+</ul>
